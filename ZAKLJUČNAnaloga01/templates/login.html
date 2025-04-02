@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NK POK</title>
+    <!-- ---- RAZLAGA: jQuery ----
+    jQuery je JavaScript knjižnica, ki poenostavlja delo z DOM, dogodki, animacijami in AJAX zahtevami
+    Vključimo jo s povezavo do CDN (Content Delivery Network)
+    Več info: https://jquery.com/
+    ---------------------------- -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Osnovne nastavitve */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #212121; /* Temna barva ozadja */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        /* Glavni naslov */
+        h1 {
+            font-size: 2.5rem;
+            color: #e60000; /* Rdeča barva za naslov */
+            margin-bottom: 20px;
+        }
+
+        /* Prostor za sliko */
+        #image-container {
+            margin-bottom: 20px;
+        }
+
+        #image-container img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        /* Kontener za prijavo */
+        #login-container {
+            background-color: rgba(0, 0, 0, 0.8); /* Polprosojna črna podlaga */
+            border-radius: 10px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Vnosna polja */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #006400; /* Temno zelena barva za robove */
+            background-color: #fff;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #e60000; /* Rdeča barva ob fokusu */
+        }
+
+        /* Gumb za prijavo / registracijo */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #e60000; /* Rdeča barva */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #d40000; /* Temnejša rdeča ob hoverju */
+        }
+
+        /* Potrditveno polje "Zapomni si me" */
+        #remember-me {
+            margin-top: 10px;
+        }
+
+        /* Sporočilo o napaki */
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        /* Responsivnost: Na manjših zaslonih (mobilni telefoni) */
+        @media (max-width: 500px) {
+            #login-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>NK POK</h1>
+    
+    <!-- Prostor za sliko -->
+    <div id="image-container">
+        <img src="{{ url_for('static', filename='pok_03.png') }}" width="500" height="400" alt="NK_POK">
+    </div>
+
+    <div id="error-message" style="color: red; display: none;"></div>
+    
+    <div id="login-container">
+        <h2>Prijava ali Registracija</h2>
+        <p>Če račun ne obstaja, bo ustvarjen nov.</p>
+        
+        <div>
+            <label for="username">Uporabniško ime:</label>
+            <input type="text" id="username" required>
+        </div>
+        
+        <div>
+            <label for="password">Geslo:</label>
+            <input type="password" id="password" required>
+        </div>
+        
+        <div>
+            <!-- ---- RAZLAGA: onclick atribut ----
+            onclick je dogodkovni atribut HTML elementa
+            Ko uporabnik klikne na element, se izvede JavaScript koda, določena v atributu
+            V tem primeru klic funkcije loginOrRegister()
+            Več info: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick
+            ------------------------------ -->
+            <button onclick="loginOrRegister()">Prijava / Registracija</button>
+        </div>
+    </div>
+    
+    <script>
+        function loginOrRegister() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMessage = document.getElementById('error-message');
+
+            if (username === '' || password === '') {
+                errorMessage.textContent = 'Uporabniško ime in geslo sta obvezna!';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            errorMessage.style.display = 'none';
+
+            $.ajax({
+                url: '/login',
+                type: 'POST',
+                data: {
+                    username: username,
+                    password: password
+                },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        window.location.href = '/';
+                    } else {
+                        errorMessage.textContent = response.error;
+                        errorMessage.style.display = 'block';
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Podrobnosti napake:', xhr.responseText);
+                    errorMessage.textContent = 'Prišlo je do napake. Poskusite znova.';
+                    errorMessage.style.display = 'block';
+                }
+            });
+        }
+
+        document.getElementById('username').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                loginOrRegister();
+            }
+        });
+
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                loginOrRegister();
+            }
+        });
+    </script>
+</body>
+</html>
