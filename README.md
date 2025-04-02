@@ -1,4 +1,4 @@
-Analiza:
+Ideje:
 
 Osnovne informacije o klubu: zgodovina kluba, vizija,struktura.
 
@@ -13,3 +13,23 @@ Spletna trgovina: Za prodajo klubskih izdelkov (majice, šali, kape, vstopnice z
 Povezava z navijači: Forum, komentarji, povezave do socialnih omrežij.
 
 Sponzorji in partnerji: Predstavitev sponzorjev, njihovih logotipov, povezav in promocij.
+
+Analiza trga:
+
+Pomanjkljivosti trenutnih spletnih strani:
+
+Mnogi nogometni klubi še vedno uporabljajo zastarele ali nezanimive spletne strani, ki ne ponujajo uporabniške izkušnje, ki bi bila v skladu z modernimi standardi.
+
+Klubi se morda premalo osredotočajo na interaktivnost s svojimi navijači.
+
+Pogosto manjka dostopnost vsebin (slabe mobilne različice, počasne strani).
+
+Pomanjkanje e-trgovine za prodajo klubskih izdelkov.
+
+Potrebščine uporabnikov:
+
+Navijači in obiskovalci želijo hiter dostop do informacij (rezultati, dogodki, novice).
+
+Navijači želijo imeti boljšo povezavo z ekipo (prilagojene vsebine, osebni stiki, komunikacija s trenerji in igralci).
+
+Klubi potrebujejo boljše orodje za promocijo in povečanje angažiranosti (novice, vsebine, video prenos).
