@@ -36,7 +36,7 @@ User = Query()  # Za poizvedbe po bazi
 # ---- RAZLAGA: Flask Routes (Poti) ----
 # @app.route() je dekorator, ki pove Flask-u, katero URL pot naj poveže s katero funkcijo
 # Ko uporabnik obišče določeno pot v brskalniku, Flask pokliče ustrezno funkcijo
-# / = glavna stran (root)
+# / = glavna stran (root).
 # Več info: https://flask.palletsprojects.com/en/2.0.x/quickstart/#routing
 # --------------------------------------
 @app.route('/')
