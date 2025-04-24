@@ -4,121 +4,7 @@
 <title>Lighthouse Island Bistro</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
- * { box-sizing: border-box; }
-body {font-family: Verdana, Arial, sans-serif;
-      background-color: #00005D;
-}
-#wrapper { background-color: #b3c7e6; 
-           color: #000066;
-           width: 90%;
-		   margin: auto;
-           min-width: 450px;
-		   max-width: 1020px;
-} 
-header { background-color: #869dc7;
-         background-image: url({{ url_for('static', filename='pok_03.png') }});
-		 background-repeat: no-repeat;
-		 height: 280px;
-        color: #00005D; 
-		padding: 10px;
-}
-header h1 { padding-left: 200px;
- }
-header span { font-style: italic;
-			  font-weight: bold;
-			  color: #00005D;
-			  padding-right: 15px;
-			  text-align: right;
-		      display: block; 
-}
-nav { float: left;
-	  width: 150px;
-	  letter-spacing:0.1em;
-	  font-weight: bold;
-} 
-
-nav ul { list-style-type: none; 
-         margin: 0;
-         padding: 0;
-}
-nav li { border-bottom: 1px solid #ffffff;
-}
-nav a { text-decoration: none; 
-        display: block;
-		padding: 15px;
-}
-nav a:link { color: #ffffff; }
-nav a:visited { color: #eaeaea; }
-nav a:hover {  color: #869dc7;
-               background-color: #eaeaea;
-}
-main { background-color: #ffffff;
-           color: #000000;
-		   padding: 10px 20px;
-	       overflow: auto; 
-} 
-
-h2 { color: #869dc7; 
-     font-family: arial, sans-serif;
-	 margin: 5px;
-}
-
-figure {   float: right;
-		   margin: 10px;
-           padding: 5px;
-		   background-color: #FFF;
-		   border: 1px solid #CCC;
-		   box-shadow: 5px 5px 5px #828282;
-		   transform: rotate(3deg);
-}
-figcaption { text-align: center;
-		   font-size: .8em;
-		   font-style: italic;
-}
-footer {font-size:70%;
-         text-align: center;
-         padding: 10px;
-         background-color: #869dc7;
-		 clear: both;
-}
-#offer { background-color: #eaeaea;
-          width: 10em;
-		  margin: auto;
-		  text-align: center;
-		  transform: scale(2);
-}
-#offer a { text-decoration: none;
-            color: #FF0000;		  
-}
-header, main, nav, footer, figure, figcaption { display: block; }
-@media only screen and (max-width: 1024px) {
-	body { margin: 0; background-color: #869dc7;}
-	#wrapper { width: auto; margin: 0;}                                                            
-	main { margin-left: 0; }
-	nav { float: none; 
-          width: auto; }
-	nav li { display: inline-block; 
-               padding: 0.5em; }
-	nav ul { text-align: center; }
-	nav a { border-style: none; }
-	h1, h2 { font-size: 120%; }
-	p { font-size: 90%; }
-} 
-@media only screen and (max-width: 768px) {
-    #wrapper { min-width: 0; }
-    header { background-image: url(lighthousemini.jpg); }
-	header h1 { padding-left: 0; }
-	h1, h2 { font-size: 100%; }
-	span { font-size: 80%; } 
-  	figure { display: none;}
- 	nav, nav ul, nav li { padding: 0; }
- 	nav li { display: block; }
-    nav a { display: block; 
-      	padding: 0.5em 0;
-        border-bottom: 2px ridge #00005D; }
-    }
-</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 <div id="wrapper">  
@@ -159,77 +45,77 @@ header, main, nav, footer, figure, figcaption { display: block; }
    </footer>
   </div> 
   <div class="stadion">
-    <img src="Rectangle 1" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 2" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 3" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 4" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 5" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 6" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 7" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 8" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 9" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 10" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 11" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 12" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 13" width="250" height="355" alt="Lighthouse Island"> 
-    <img src="Rectangle 14" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 15" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 16" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 17" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 18" width="250" height="355" alt="Lighthouse Island">  
-    <img src="Rectangle 19" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 20" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 21" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 22" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 23" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 24" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 25" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 26" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 27" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 28" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 29" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 30" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 31" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 32" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 33" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 34" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 35" width="250" height="355" alt="Lighthouse Island">
-    <img src="Rectangle 36" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 37" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 38" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 39" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 40" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 41" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 42" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 43" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 44" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 45" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 46" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Rectangle 47" width="250" height="355" alt="Lighthouse Island">   
-    <img src="Vector 3" width="250" height="355" alt="Lighthouse Island"> 
-    <img src="Vector 4" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 5" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 6" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 7" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 8" width="250" height="355" alt="Lighthouse Island">  
-    <img src="Vector 9" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 10" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 11" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 12" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 13" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 14" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 15" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 16" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 17" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 18" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 19" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 20" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 21" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 22" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 23" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 24" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 25" width="250" height="355" alt="Lighthouse Island">
-    <img src="Vector 26" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 1.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 2.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 3.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 4.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 5.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 6.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 7.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 8.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 9.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 10.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 11.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 12.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 13.png" width="250" height="355" alt="Lighthouse Island"> 
+    <img src="../static/image/stadion/Rectangle 14.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 15.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 16.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 17.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 18.png" width="250" height="355" alt="Lighthouse Island">  
+    <img src="../static/image/stadion/Rectangle 19.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 20.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 21.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 22.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 23.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 24.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 25.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 26.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 27.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 28.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 29.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 30.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 31.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 32.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 33.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 34.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 35.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Rectangle 36.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 37.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 38.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 39.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 40.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 41.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 42.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 43.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 44.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 45.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 46.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Rectangle 47.png" width="250" height="355" alt="Lighthouse Island">   
+    <img src="../static/image/stadion/Vector 3.png" width="250" height="355" alt="Lighthouse Island"> 
+    <img src="../static/image/stadion/Vector 4.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 5.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 6.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 7.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 8.png" width="250" height="355" alt="Lighthouse Island">  
+    <img src="../static/image/stadion/Vector 9.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 10.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 11.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 12.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 13.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 14.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 15.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 16.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 17.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 18.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 19.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 20.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 21.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 22.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 23.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 24.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 25.png" width="250" height="355" alt="Lighthouse Island">
+    <img src="../static/image/stadion/Vector 26.png" width="250" height="355" alt="Lighthouse Island">
 </div>
   <script>
 	// const myImage = new Image(100, 200);
@@ -238,7 +124,7 @@ header, main, nav, footer, figure, figcaption { display: block; }
 	
 	// Funkcija za odjavo
         function domov() {
-            // Preusmeri na pot za odjavo
+            // P../static/image/stadion/Reusmeri na pot za odjavo
             window.location.href = '/';
         }
 	// Funkcija za odjavo
